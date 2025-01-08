@@ -3,7 +3,7 @@ const DateNow = () => {
     const fullDate = date.toLocaleDateString()
     
     return (
-        <div className="relative left-20">
+        <div className="relative left-0 pl-10 lg:pl-20 z-50 cursor-auto">
             {fullDate}
         </div>
     )
