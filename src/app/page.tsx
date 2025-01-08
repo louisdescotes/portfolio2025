@@ -1,11 +1,9 @@
-import Corner from "./components/ux/corner/corner";
-import DateNow from "./components/ux/date";
+import Nav from "./components/nav";
 
 export default function Accueil() {
   return (
-    <div>
-      <h1>Accueil</h1>
-      <DateNow />
+    <div className="relative h-full">
+      <Nav />
     </div>
   );
 }
