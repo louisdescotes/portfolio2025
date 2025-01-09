@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function Accueil() {
-  const nameProject = ["Sparky", "Poyzeet", "Projet3"];
+  const nameProject = ["Poyzeet", "Sparky", "Figma"];
   const imageProjet = ["one", "two", "three"]
   const [numberProjet, setNumberProjet] = useState(0);
   const containerRef = useRef(null);
@@ -79,8 +79,8 @@ export default function Accueil() {
         ))}
       </div>
       <aside className="w-full h-full flex flex-col items-center justify-center gap-6">
-        <div className="flex items-center justify-center h-fit w-full overflow-hidden">
-          <Image className="w-5/6" src={`/${imageProjet[numberProjet]}.jpg`} alt="disque" width={1128} height={632} />
+        <div className="flex items-center justify-center w-[80%] h-[75dvh] overflow-hidden">
+          <Image className="w-full object-cover h-full" src={`/${imageProjet[numberProjet]}.jpg`} alt="disque" width={1128} height={632} />
         </div>
         <div className="flex flex-col gap-4 max-h-12 w-fit overflow-hidden">
           {nameProject.map((number) => (

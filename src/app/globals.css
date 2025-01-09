@@ -50,6 +50,15 @@
       --size-container-max: 479px;
   }
   }
+
+  #root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: white;
+  }
   
   body {
       color: #151414;

@@ -29,14 +29,14 @@ const Nav = () => {
                     )}
                 </div>
             </aside>
-            <aside className="relative left-0 bottom-4 w-full h-full flex items-end ">
+            <aside className="relative left-0 bottom-5 w-full h-full flex items-end ">
                 <DateNow />
                 <div className="absolute w-full flex justify-center">
                     <Link className="z-30 cursor-pointer" href="mailto:ldescotes1@gmail.com">Contact</Link>
                 </div>
                 <div className="absolute gap-1 left-0 flex items-end justify-end w-full pr-10 lg:pr-20">
                     <Link className="z-30 cursor-pointer" href="https://x.com/ldescotes1">X</Link>
-                    <p>-</p>
+                    <p className="z-30 ">-</p>
                     <Link className="z-30 cursor-pointer" href="https://www.linkedin.com/in/louis-descotes/">Linkedin</Link>
                 </div>
             </aside>
