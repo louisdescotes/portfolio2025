@@ -3,7 +3,7 @@ const DateNow = () => {
     const fullDate = date.toLocaleDateString()
     
     return (
-        <div className="relative left-0 pl-10 lg:pl-20 z-50 cursor-auto">
+        <div className="flex items-center justify-start row-start-10 lg:row-start-5 lg:row-end-6 lg:col-start-2 lg:col-end-3">
             {fullDate}
         </div>
     )

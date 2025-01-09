@@ -16,31 +16,23 @@ const Nav = () => {
   }
 
     return(
-        <section className="absolute top-0 h-full w-full p-8">
-            <aside className="relative left-0 top-0 w-full h-5 flex items-end">
-                <div className="w-full flex items-center justify-center">
-                    <p className="z-30 cursor-auto">Louis Descôtes</p>
-                </div>
-                <div className="absolute flex right-0 pr-10 lg:pr-20">
-                    {navState ? (
-                        <p className="z-30 cursor-pointer" onClick={handleBack} onKeyUp={handleBack}>Retour</p>
-                    ) : (
-                        <Link className="z-30 cursor-pointer" href="/about" onClick={handleNavAbout}>About</Link>
-                    )}
-                </div>
-            </aside>
-            <aside className="relative left-0 bottom-5 w-full h-full flex items-end ">
-                <DateNow />
-                <div className="absolute w-full flex justify-center">
-                    <Link className="z-30 cursor-pointer" href="mailto:ldescotes1@gmail.com">Contact</Link>
-                </div>
-                <div className="absolute gap-1 left-0 flex items-end justify-end w-full pr-10 lg:pr-20">
-                    <Link className="z-30 cursor-pointer" href="https://x.com/ldescotes1">X</Link>
-                    <p className="z-30 ">-</p>
-                    <Link className="z-30 cursor-pointer" href="https://www.linkedin.com/in/louis-descotes/">Linkedin</Link>
-                </div>
-            </aside>
-        </section>
+        <>
+            <p className="flex items-center justify-center row-start-1 row-end-2 col-start-3 col-end-4 lg:row-start-1 lg:row-end-2 lg:col-start-5 lg:col-end-6 text-center">Louis Descôtes</p>
+            <div className="flex items-center justify-end row-start-1 row-end-2 col-start-4 col-end-5 lg:row-start-1 lg:row-end-2 lg:col-start-8 lg:col-end-9 ">
+                {navState ? (
+                    <p className="z-30 cursor-pointer" onClick={handleBack} onKeyUp={handleBack}>Retour</p>
+                ) : (
+                    <Link className="z-30 cursor-pointer" href="/about" onClick={handleNavAbout}>About</Link>
+                )}
+            </div>
+            <DateNow />
+            <Link className="flex items-center justify-center z-30 cursor-pointer col-start-3 col-end-4 row-start-10 row-end-11 lg:row-start-5 lg:row-end-6 lg:col-start-5 lg:col-end-6" href="mailto:ldescotes1@gmail.com">Contact</Link>
+            <div className="flex items-center justify-end gap-1 col-start-4 col-end-5 row-start-10 row-end-11 lg:row-start-5 lg:row-end-6 lg:col-start-8 lg:col-end-9">
+                <Link className="z-30 cursor-pointer" href="https://x.com/ldescotes1">X</Link>
+                <p className="z-30 ">-</p>
+                <Link className="z-30 cursor-pointer" href="https://www.linkedin.com/in/louis-descotes/">Linkedin</Link>
+            </div>
+        </>
     )
 }
 export default Nav

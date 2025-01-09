@@ -2,16 +2,20 @@ import Corner from "./corner"
 
 const CornerLayout = () => {
     return(
-        <section className="absolute flex flex-col justify-between w-full h-full p-8 z-10">
-            <div className="w-full flex items-top justify-between">
+        <>
+            <div className="flex items-center justify-center row-start-1 col-start-1 row-end-2 col-end-2 lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-2 ">
                 <Corner angle={180} />
-                <Corner angle={-90}/>
             </div>
-            <div className="w-full flex items-bottom justify-between">
-                <Corner angle={90}/>
-                <Corner angle={0}/>
+            <div className="flex items-center justify-center row-start-1 col-start-5 row-end-2 col-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-9 lg:col-end-10 ">
+                <Corner angle={-90} />
             </div>
-        </section>
+            <div className="flex items-center justify-center row-start-10 col-start-1 row-end-10 col-end-2 lg:row-start-5 lg:row-end-6 lg:col-start-1 lg:col-end-2 ">
+                <Corner angle={90} />
+            </div>
+            <div className="flex items-center justify-center row-start-10 col-start-5 row-end-10 col-end-6 lg:row-start-5 lg:row-end-6 lg:col-start-9 lg:col-end-10  ">
+                <Corner angle={0} />
+            </div>
+        </>
     )
 }
 export default CornerLayout
