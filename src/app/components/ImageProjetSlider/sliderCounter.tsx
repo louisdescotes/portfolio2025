@@ -1,7 +1,7 @@
 const SliderCounter = () => {
     return (
         <section
-        className="flex flex-col gap-2 justify-center w-full h-ful col-start-3 col-end-5 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 lg:col-start-1 lg:col-end-2 lg:ml-12 absolute"
+        className="flex flex-col gap-2 justify-center w-full h-full col-start-3 col-end-5 row-start-1 row-end-3 lg:row-start-3 lg:row-end-4 lg:col-start-1 lg:col-end-2 lg:ml-12 absolute"
       >
             <div className="">01</div>
             <div>
