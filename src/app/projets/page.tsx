@@ -1,11 +1,52 @@
-import ThreeScene from "../scene/Scene"
+"use client";
 
-const Page = () => {
-  return(
-    <main className="absolute w-full h-dvh grid grid-cols-[.1fr,1fr,1fr,1fr,.1fr] grid-rows-10 gap-4 lg:grid-cols-[0.5fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,0.5fr] lg:grid-rows-[0.5fr,1fr,1fr,1fr,0.5fr]">
-      <p className=" h-full w-full flex items-end justify-center text-center lg:col-start-5 lg:col-end-6 lg:row-start-4 lg:row-end-5 top-0 left-0 z-50 text-black">Spikes</p>
-      <ThreeScene />
+import { useRef, useEffect } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import ThreeScene from "../scene/Scene";
+
+const Page: React.FC = () => {
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!scrollerRef.current) return;
+
+    const locoScroll = new LocomotiveScroll({
+      el: scrollerRef.current,
+      smooth: true,
+      getDirection: true,
+      direction: "horizontal",
+      smartphone: {
+        smooth: true,
+        direction: "horizontal",
+      },
+    });
+
+    return () => {
+      locoScroll.destroy(); // Nettoyage en cas de changement de page
+    };
+  }, []);
+
+  return (
+    <main
+      ref={scrollerRef}
+      data-scroll-container
+      className="absolute h-screen w-screen overflow-hidden"
+    >
+
+      <div data-scroll-section className=" w-screen h-full">
+        <ThreeScene />
+      </div>
+      <section
+        data-scroll-section
+        className="flex flex-row w-[300vw] h-full"
+      >
+        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
+          Section 1
+        </div>
+      </section>
     </main>
-  )
-}
-export default Page
+  );
+};
+
+export default Page;

@@ -27,10 +27,10 @@ const Nav = () => {
             </div>
             <DateNow />
             <Link className="flex items-center justify-center z-30 cursor-pointer col-start-3 col-end-4 row-start-10 row-end-11 lg:row-start-5 lg:row-end-6 lg:col-start-5 lg:col-end-6" href="mailto:ldescotes1@gmail.com">Contact</Link>
-            <div className="flex items-center justify-end gap-1 col-start-4 col-end-5 row-start-10 row-end-11 lg:row-start-5 lg:row-end-6 lg:col-start-8 lg:col-end-9">
-                <Link className="z-30 cursor-pointer" href="https://x.com/ldescotes1">X</Link>
-                <p className="z-30 ">-</p>
-                <Link className="z-30 cursor-pointer" href="https://www.linkedin.com/in/louis-descotes/">Linkedin</Link>
+            <div className="z-30 flex items-center justify-end gap-1 col-start-4 col-end-5 row-start-10 row-end-11 lg:row-start-5 lg:row-end-6 lg:col-start-8 lg:col-end-9">
+                <Link className=" cursor-pointer" href="https://x.com/ldescotes1">X</Link>
+                <p className=" ">-</p>
+                <Link className=" cursor-pointer" href="https://www.linkedin.com/in/louis-descotes/">Linkedin</Link>
             </div>
         </>
     )

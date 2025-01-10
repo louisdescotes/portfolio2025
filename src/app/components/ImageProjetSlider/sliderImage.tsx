@@ -1,11 +1,12 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const SliderImage = () => {
     return (
         <aside className="w-full h-full flex flex-col justify-between items-center col-start-2 col-end-5 row-start-3 row-end-9 lg:row-start-2 lg:row-end-5 lg:col-start-2 lg:col-end-9">
             <Image className="w-full object-cover h-[92%]" src="/one.jpg" alt="disque" width={1128} height={632} />
               <div className=" h-18 flex justify-center items-center pt-4">
-                <h3 className="">Sparky</h3>
+                <Link href={"/projets"} className="">Sparky</Link>
               </div>
             {/* <div className="flex flex-col gap-4 max-h-12 w-fit overflow-hidden">
           {nameProject.map((number) => (
