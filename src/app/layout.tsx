@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <section className="p-2 lg:p-0 grid grid-cols-[.1fr,1fr,1fr,1fr,.1fr] grid-rows-10 gap-4 lg:grid-cols-9 lg:grid-rows-5 w-full h-screen relative ">
+        <section className="p-2 lg:p-0 grid grid-cols-[.1fr,1fr,1fr,1fr,.1fr] grid-rows-10 gap-4 lg:grid-cols-[0.5fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,0.5fr] lg:grid-rows-[0.5fr,1fr,1fr,1fr,0.5fr] w-full h-screen relative ">
           <CornerLayout />
           <Nav />
           {children}

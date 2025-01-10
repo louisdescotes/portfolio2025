@@ -17,7 +17,7 @@ const Nav = () => {
 
     return(
         <>
-            <p className="flex items-center justify-center row-start-1 row-end-2 col-start-3 col-end-4 lg:row-start-1 lg:row-end-2 lg:col-start-5 lg:col-end-6 text-center">Louis Descôtes</p>
+            <Link href="/" className="z-30 flex items-center justify-center row-start-1 row-end-2 col-start-3 col-end-4 lg:row-start-1 lg:row-end-2 lg:col-start-5 lg:col-end-6 text-center">Louis Descôtes</Link>
             <div className="flex items-center justify-end row-start-1 row-end-2 col-start-4 col-end-5 lg:row-start-1 lg:row-end-2 lg:col-start-8 lg:col-end-9 ">
                 {navState ? (
                     <p className="z-30 cursor-pointer" onClick={handleBack} onKeyUp={handleBack}>Retour</p>
