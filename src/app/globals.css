@@ -51,15 +51,6 @@
   }
   }
 
-  #root {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: white;
-  }
-  
   body {
       color: #151414;
       background-color: #FAFAFA;
@@ -67,6 +58,7 @@
       font-size: var(--size-font);
       line-height: 1;
       font-weight: 500;
+      overflow: hidden;
   }
 
   html.has-scroll-smooth {

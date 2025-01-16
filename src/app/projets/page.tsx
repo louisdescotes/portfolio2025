@@ -34,49 +34,65 @@ const Page: React.FC = () => {
       className="absolute h-screen w-screen overflow-hidden"
     >
 
-      <div data-scroll-section className=" w-screen h-full">
+      <div data-scroll-section className=" w-screen h-full z-50">
         <ThreeScene />
       </div>
-      <section
-        data-scroll-section
-        className="flex flex-row w-[100svw] h-full"
-      >
-        <div className="flex w-[100svw] h-full bg-blue-500">
-        <p className="col-row-10">Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio recusandae qui harum velit aut nihil impedit. Et alias doloremque ut galisum consectetur aut unde numquam ut dolores quasi quo laborum quibusdam.</p> <br />
-        <p>Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia </p>
+      <section data-scroll-section className=" flex flex-row w-[100svw] h-full -z-10">
+        <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
+          <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
+            <p className="max-w-lg w-auto text-wrap">
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio.<br />
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia.
+            </p>
+          </div>
         </div>
       </section>
-      <section
-        data-scroll-section
-        className="flex flex-row w-[100vw] h-full"
-      >
-        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
-          SECTION 2
+
+      <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+        <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
+          <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
+            <p className="max-w-lg w-auto text-wrap">
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio.<br />
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia.
+            </p>
+          </div>
         </div>
       </section>
-      <section
-        data-scroll-section
-        className="flex flex-row w-[100vw] h-full"
-      >
-        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
-          SECTION 3
+
+            <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+        <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
+          <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
+            <p className="max-w-lg w-auto text-wrap">
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio.<br />
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia.
+            </p>
+          </div>
         </div>
       </section>
-      <section
-        data-scroll-section
-        className="flex flex-row w-[100vw] h-full"
-      >
-        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
-          SECTION 4
+
+            <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+        <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
+          <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
+            <p className="max-w-lg w-auto text-wrap">
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio.<br />
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia.
+            </p>
+          </div>
         </div>
       </section>
       
-      <section
-        data-scroll-section
-        className="flex flex-row w-[100vw] h-full"
-      >
-        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
-          FIN
+      <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+        <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
+          <div className="row-start-3 row-end-4 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex flex-col justify-center items-center gap-0.5">
+            <p className="max-w-lg w-auto text-wrap text-justify">
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio quasi sit quia voluptatem ut optio.<br />
+              Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia.
+            </p>
+            <div className="w-full flex items-center justify-between">
+              <p>Projet perso</p>
+              <p>DESCOTES Louis</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

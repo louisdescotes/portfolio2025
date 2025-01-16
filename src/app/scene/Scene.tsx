@@ -21,16 +21,30 @@ const ThreeScene: React.FC = () => {
       sceneRef.current.appendChild(renderer.domElement);
     }
 
-    const geometry = new THREE.PlaneGeometry(8, 5, 1, 1); 
-    const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+    let geometry: THREE.PlaneGeometry;
+    if (window.innerWidth > 425 && window.innerWidth <= 768) {
+      geometry = new THREE.PlaneGeometry(6, 4, 1, 1);
+    } else if (window.innerWidth >= 768) {
+      geometry = new THREE.PlaneGeometry(8, 5, 1, 1); 
+    } else {
+      geometry = new THREE.PlaneGeometry(3, 3, 1, 1);
+    }
+
+    const material = new THREE.MeshBasicMaterial({ color: 0x000 });
     const plane = new THREE.Mesh(geometry, material);
     scene.add(plane);
 
     camera.position.z = 5;
 
+    const plane1Geometry = new THREE.PlaneGeometry(5, 4.5, 1, 1)
+    const plane1Material = new THREE.MeshBasicMaterial({ color: 0x000 });
+    const plane1 = new THREE.Mesh(plane1Geometry, plane1Material);
+    plane1.position.set(8, .8, 0)
+    scene.add(plane1);
+
+
     const resizeHandler = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
-
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
     };
@@ -51,7 +65,11 @@ const ThreeScene: React.FC = () => {
     };
   }, []);
 
-  return <div className="webgl" id="root" ref={sceneRef} />;
-};
+  return (
+    <div
+      ref={sceneRef}
+      className="absolute top-0 left-0 w-full h-full z-50"
+      />
+  );};
 
 export default ThreeScene;
