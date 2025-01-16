@@ -4,35 +4,31 @@ import { useRef, useEffect } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import ThreeScene from "../scene/Scene";
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-let DynamicLocomotiveScroll: any;
-if (typeof window !== "undefined") {
-  import("locomotive-scroll").then(mod => {
-    DynamicLocomotiveScroll = mod.default;
-  });
-}
-
-
-const Page: React.FC = () => {
+const Page = () => {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined" || !scrollerRef.current) return;
 
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-    const locoScroll = new (DynamicLocomotiveScroll as any)({
-      el: scrollerRef.current,
-      smooth: true,
-      getDirection: true,
-      direction: "horizontal",
-      smartphone: {
+    let locoScroll: import("locomotive-scroll");
+
+    import("locomotive-scroll").then((mod) => {
+      const DynamicLocomotiveScroll = mod.default;
+
+      locoScroll = new DynamicLocomotiveScroll({
+        el: scrollerRef.current as HTMLElement,
         smooth: true,
+        getDirection: true,
         direction: "horizontal",
-      },
+        smartphone: {
+          smooth: true,
+          direction: "horizontal",
+        },
+      });
     });
 
     return () => {
-      locoScroll.destroy();
+      if (locoScroll) locoScroll.destroy();
     };
   }, []);
 
