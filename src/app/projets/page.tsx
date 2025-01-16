@@ -45,7 +45,7 @@ const Page: React.FC = () => {
       <div data-scroll-section className="w-screen h-full z-50">
         <ThreeScene />
       </div>
-      <section data-scroll-section className="flex flex-row w-[100svw] h-full -z-10">
+      <section data-scroll-section className="flex flex-row w-[100svw] h-full -z-10 py-[5svh]">
         <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
           <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
             <p className="max-w-lg w-auto text-wrap">
@@ -55,7 +55,7 @@ const Page: React.FC = () => {
         </div>
       </section>
 
-      <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+      <section data-scroll-section className="flex flex-row w-[100svw] h-full py-[5svh]">
         <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
           <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
             <p className="max-w-lg w-auto text-wrap">
@@ -66,7 +66,7 @@ const Page: React.FC = () => {
         </div>
         </section>
 
-            <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+            <section data-scroll-section className="flex flex-row w-[100svw] h-full py-[5svh]">
         <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
           <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
             <p className="max-w-lg w-auto text-wrap">
@@ -77,7 +77,7 @@ const Page: React.FC = () => {
         </div>
         </section>
 
-        <section data-scroll-section className="flex flex-row w-[100svw] h-full">
+        <section data-scroll-section className="flex flex-row w-[100svw] h-full py-[5svh]">
           <div className="w-[100svw] h-full grid grid-rows-5 grid-cols-6">
             <div className="row-start-4 row-end-6 col-start-2 col-end-6 lg:col-start-3 lg:col-end-5 flex justify-center items-center">
               <p className="max-w-lg w-auto text-wrap">
