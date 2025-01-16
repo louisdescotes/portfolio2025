@@ -39,10 +39,44 @@ const Page: React.FC = () => {
       </div>
       <section
         data-scroll-section
-        className="flex flex-row w-[300vw] h-full"
+        className="flex flex-row w-[100svw] h-full"
+      >
+        <div className="flex w-[100svw] h-full bg-blue-500">
+        <p className="col-row-10">Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia voluptatem ut optio recusandae qui harum velit aut nihil impedit. Et alias doloremque ut galisum consectetur aut unde numquam ut dolores quasi quo laborum quibusdam.</p> <br />
+        <p>Lorem ipsum dolor sit amet. Ut enim beatae qui numquam quasi sit quia </p>
+        </div>
+      </section>
+      <section
+        data-scroll-section
+        className="flex flex-row w-[100vw] h-full"
       >
         <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
-          Section 1
+          SECTION 2
+        </div>
+      </section>
+      <section
+        data-scroll-section
+        className="flex flex-row w-[100vw] h-full"
+      >
+        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
+          SECTION 3
+        </div>
+      </section>
+      <section
+        data-scroll-section
+        className="flex flex-row w-[100vw] h-full"
+      >
+        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
+          SECTION 4
+        </div>
+      </section>
+      
+      <section
+        data-scroll-section
+        className="flex flex-row w-[100vw] h-full"
+      >
+        <div className="w-[100vw] h-full flex items-center justify-center bg-blue-500">
+          FIN
         </div>
       </section>
     </main>

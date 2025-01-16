@@ -21,21 +21,17 @@ const ThreeScene: React.FC = () => {
       sceneRef.current.appendChild(renderer.domElement);
     }
 
-    const geometry = new THREE.PlaneGeometry((window.innerWidth / window.innerHeight) * 6 , (window.innerWidth / window.innerHeight) * 4, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0xfff0 });
+    const geometry = new THREE.PlaneGeometry(8, 5, 1, 1); 
+    const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
     const plane = new THREE.Mesh(geometry, material);
     scene.add(plane);
 
     camera.position.z = 5;
 
     const resizeHandler = () => {
-      const aspectRatio = window.innerWidth / window.innerHeight;
-
-      plane.scale.set(aspectRatio / 1.4, aspectRatio / 1.8, 1);
-
       renderer.setSize(window.innerWidth, window.innerHeight);
 
-      camera.aspect = aspectRatio;
+      camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
     };
 
