@@ -120,6 +120,34 @@
   }
 
   @font-face {
+    font-family: 'ApocNormal-BoldItalic';
+    src: url('../fonts/ApocNormal-BoldItalic.woff2') format('woff2'),
+         url('../fonts/ApocNormal-BoldItalic.woff') format('woff'),
+         url('../fonts/ApocNormal-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'ApocNormal-RegularItalic';
+    src: url('../fonts/ApocNormal-RegularItalic.woff2') format('woff2'),
+         url('../fonts/ApocNormal-RegularItalic.woff') format('woff'),
+         url('../fonts/ApocNormal-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'ApocRevelations-Bold';
+    src: url('../fonts/ApocRevelations-Bold.woff2') format('woff2'),
+         url('../fonts/ApocRevelations-Bold.woff') format('woff'),
+         url('../fonts/ApocRevelations-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: 'Satoshi-Light';
     src: url('../fonts/Satoshi-Light.woff2') format('woff2'),
          url('../fonts/Satoshi-Light.woff') format('woff'),
@@ -254,8 +282,8 @@
   }
 
   .apocBase {
+    font-family: 'ApocNormal-RegularItalic', sans-serif;
     font-size: 1rem;
-
   }
   .chargement {
     font-family: 'Satoshi-Medium', sans-serif;
@@ -266,25 +294,26 @@
     font-size: 2.25rem;
   }
   .titleProjet {
+    font-family: 'ApocRevelations-Bold', sans-serif;
     font-size: 8rem;
   }
   .descriptionProjet {
+    font-family: 'ApocNormal-BoldItalic', sans-serif;
     font-size: 1.25rem;
   }
   .logoName {
     font-family: 'Satoshi-Medium', sans-serif;
     font-size: 1rem;
-
   }
   .roleName {
     font-family: 'Satoshi-Regular', sans-serif;
     font-size: 0.875rem;
   }
   .titleDescriptionProjet {
+    font-family: 'ApocNormal-BoldItalic', sans-serif;
     font-size: 1rem;
-
   }
   .subtitleDescriptionProjet {
+    font-family: 'Satoshi-Medium', sans-serif;
     font-size: 1rem;
-
   }
