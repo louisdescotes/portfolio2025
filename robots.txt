@@ -1,0 +1,10 @@
+# General rules
+User-agent: *
+Disallow: /private/
+Allow: /public/
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Disallow: /no-google/
+
+# Sitemap location

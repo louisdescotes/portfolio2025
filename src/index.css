@@ -78,6 +78,7 @@
   .chargement {
     font-family: 'Satoshi-Medium', sans-serif;
     font-size: 8rem;
+    font-display: swap;
   }
   .aboutTitle {
     font-family: 'ApocNormal-BoldItalic', sans-serif;
@@ -136,7 +137,8 @@
   
   @media screen and (max-width: 767px) {
     .aboutTitle,
-    .titleProjet {
+    .titleProjet,
+    .footerProjet {
           font-size: 4em;
       }
 

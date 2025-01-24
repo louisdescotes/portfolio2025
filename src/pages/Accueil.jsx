@@ -16,7 +16,7 @@ const Accueil = () => {
               setHoveredLink(null);
             }}
             to="/sparky"
-            className="h-full flex justify-between items-center w-full "
+            className="h-full flex flex-col lg:flex-row lg:justify-between lg:items-center w-full "
           >
             <div className="flex items-center relative">
               <p
@@ -24,7 +24,7 @@ const Accueil = () => {
                   hoveredLink === "sparky" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
-                } projet pl-4 pt-1`}
+                } projet lg:pl-4 pt-3`}
               >
                 Sparky
               </p>
@@ -57,7 +57,7 @@ const Accueil = () => {
               setHoveredLink(null);
             }}
             to="/poyzeet"
-            className="h-full flex justify-between items-center w-full transss"
+            className="h-full flex flex-col lg:flex-row lg:justify-between lg:items-center w-full"
           >
             <div className="flex items-center relative">
               <p
@@ -65,7 +65,7 @@ const Accueil = () => {
                   hoveredLink === "poyzeet" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
-                } projet pl-4 pt-1`}
+                } projet lg:pl-4 pt-3`}
               >
                 Poyzeet
               </p>
@@ -92,27 +92,27 @@ const Accueil = () => {
 
           <Link
             onMouseEnter={() => {
-              setHoveredLink("realisations");
+              setHoveredLink("explorations");
             }}
             onMouseLeave={() => {
               setHoveredLink(null);
             }}
-            to="/sparky"
-            className=" h-full flex justify-between items-center w-full "
+            to="/explorations"
+            className=" h-full flex flex-col lg:flex-row lg:justify-between lg:items-center w-full "
           >
             <div className="flex items-center relative">
               <p
                 className={` ${
-                  hoveredLink === "realisations" || hoveredLink === null
+                  hoveredLink === "explorations" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
-                } projet pl-4 pt-1`}
+                } projet lg:pl-4 pt-3`}
               >
-                Realisations
+                Explorations
               </p>
               <span
                 className={` ${
-                  hoveredLink === "realisations" || hoveredLink === null
+                  hoveredLink === "explorations" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
                 } apocBase absolute top-0`}
@@ -134,7 +134,7 @@ const Accueil = () => {
       </section>
       <section className="w-full lg:flex items-center pr-8 2xl:pr-0 hidden">
         {hoveredLink === "poyzeet" && (
-          <div class="grid grid-cols-[55%_45%] gap-8 px-16">
+          <div className="grid grid-cols-[55%_45%] gap-8 px-16">
             <img
               className=" h-full w-full object-cover "
               src="/img/test.jpg"
@@ -153,7 +153,7 @@ const Accueil = () => {
           </div>
         )}
         {hoveredLink === "sparky" && (
-          <div class="grid grid-cols-[55%_45%] gap-8 px-16">
+          <div className="grid grid-cols-[55%_45%] gap-8 px-16">
             <img
               className=" h-full w-full object-cover "
               src="/img/test.jpg"
@@ -171,8 +171,8 @@ const Accueil = () => {
             />
           </div>
         )}
-        {hoveredLink === "realisations" && (
-          <div class="grid grid-cols-[55%_45%] gap-8 px-16">
+        {hoveredLink === "explorations" && (
+          <div className="grid grid-cols-[55%_45%] gap-8 px-16">
             <img
               className=" h-full w-full object-cover "
               src="/img/test.jpg"

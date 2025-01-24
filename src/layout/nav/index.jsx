@@ -6,7 +6,7 @@ const Nav = () => {
             <nav className="maxWidth w-full h-full flex items-center justify-between lg:px-20 2xl:px-0 px-5">
                 <Link to="/" className="flex items-center gap-4">
                     <div className="size-8">
-                        <img className="mix-blend-difference" src="/svg/logo.svg" alt="Logo" />
+                        <img className="mix-blend-difference w-fit h-fit" src="/svg/logo.svg" alt="Logo" />
                     </div>
                     <div>
                         <p className="logoName text-[#FAFAFA] mix-blend-difference">
