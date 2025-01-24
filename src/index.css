@@ -290,6 +290,10 @@
     font-family: 'Satoshi-Medium', sans-serif;
     font-size: 8rem;
   }
+  .aboutTitle {
+    font-family: 'ApocNormal-BoldItalic', sans-serif;
+    font-size: 8rem;
+  }
   .projet {
     font-family: 'Satoshi-Medium', sans-serif;
     font-size: 2.25rem;

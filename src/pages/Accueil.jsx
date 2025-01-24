@@ -132,7 +132,7 @@ const Accueil = () => {
           </Link>
         </aside>
       </section>
-      <section className="w-full h-full ">
+      <section className="w-full h-full lg:flex hidden">
         {hoveredLink === "poyzeet" && (
           <div className="h-full w-full flex flex-col gap-8 items-center justify-center">
             <img src="/svg/logo.svg" alt="" />
