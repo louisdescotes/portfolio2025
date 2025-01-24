@@ -137,10 +137,12 @@
   
   @media screen and (max-width: 767px) {
     .aboutTitle,
-    .titleProjet,
-    .footerProjet {
+    .titleProjet {
           font-size: 4em;
       }
+    .footerProjet {
+      font-size: 3em;
+    }
 
   }
 
