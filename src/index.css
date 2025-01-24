@@ -13,6 +13,7 @@
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+      margin: 0;
   }
   
   /* ------------------------- Scaling System by Osmo [https://osmo.supply/] -------------------------  */
@@ -49,7 +50,7 @@
       --size-container-max: 479px;
   }
   }
-  
+
   body {
       font-size: var(--size-font);
       line-height: 1;
@@ -276,9 +277,9 @@
   .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    margin-top: 6rem; 
+    grid-template-rows: repeat(5, 1fr);
+    height: 100%;
+    width: 100%;
   }
 
   .apocBase {

@@ -9,7 +9,7 @@ import Accueil from './pages/Accueil';
 
 export default function App() {
   return (
-    <div className="container">
+    <div className=" w-full h-screen">
       <Nav /> 
       <Routes>
         <Route path="/" element={<Accueil />} />
