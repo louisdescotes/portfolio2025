@@ -3,7 +3,7 @@ import Footer from "./footer"
 const Page = ({name, number, className, roles, client, annee, footer, children }) => {
     return (
         <section id="top">
-            <section className="gridCol h-screen w-full bg-[url(/img/test.jpg)] bg-cover text-[#FAFAFA]">
+            <section className="gridCol h-dvh w-full bg-[url(/img/test.jpg)] bg-cover text-[#FAFAFA]">
                 <div className="flex flex-col justify-center items-center col-start-3 col-end-5 row-start-2 row-end-5 ">
                     <p className="apocBase">{number}</p>
                     <p className="titleProjet">{name}</p>

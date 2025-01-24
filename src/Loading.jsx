@@ -18,7 +18,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <section className="h-screen w-full flex items-end p-8 lg:p-16">
+    <section className="h-dvh w-full flex items-end p-8 lg:p-16">
       <p className="chargement">{counter}</p>
     </section>
   );
