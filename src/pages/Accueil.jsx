@@ -16,7 +16,7 @@ const Accueil = () => {
               setHoveredLink(null);
             }}
             to="/sparky"
-            className="h-full flex flex-col lg:flex-row lg:justify-between lg:items-center w-full "
+            className="h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full "
           >
             <div className="flex items-center relative">
               <p
@@ -57,7 +57,7 @@ const Accueil = () => {
               setHoveredLink(null);
             }}
             to="/poyzeet"
-            className="h-full flex flex-col lg:flex-row lg:justify-between lg:items-center w-full"
+            className="h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full"
           >
             <div className="flex items-center relative">
               <p
