@@ -5,9 +5,9 @@ const Accueil = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
-    <section className="flex gap-24 w-full h-full">
-      <section className="gridCol lg:max-w-[50%]">
-        <aside className="flex flex-col justify-center items-center row-start-2 row-end-5 col-start-1 col-end-7 lg:col-end-7 lg:pl-[100px] lg:px-0 px-5">
+    <section className="flex gap-24 w-full h-full maxWidth">
+      <section className="gridCol lg:max-w-[50%] ">
+        <aside className="flex flex-col justify-center items-center row-start-2 row-end-5 col-start-1 col-end-7 lg:col-end-7 lg:pl-[100px] 2xl:px-0 lg:px-0 px-5">
           <Link
             onMouseEnter={() => {
               setHoveredLink("sparky");
@@ -132,7 +132,7 @@ const Accueil = () => {
           </Link>
         </aside>
       </section>
-      <section className="w-full lg:flex items-center pr-8 hidden">
+      <section className="w-full lg:flex items-center pr-8 2xl:pr-0 hidden">
         {hoveredLink === "poyzeet" && (
           <div class="grid grid-cols-[55%_45%] gap-8 px-16">
             <img
