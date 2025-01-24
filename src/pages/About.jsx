@@ -1,6 +1,6 @@
 const About = () => {
     return(
-        <section className="container">
+        <section className="gridCol h-full">
             <aside className="col-start-1 col-end-5 row-start-2 row-end-5 flex justify-center flex-col lg:pl-[100px] lg:px-0 px-5">
             <p className=" aboutTitle">Hello</p>
             <p className="subtitleDescriptionProjet">Passionné par le web et le design, je m’inspire des sites primés pour recréer et réinventer des effets interactifs captivant qui enrichissent l’expérience utilisateur.</p>

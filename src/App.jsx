@@ -1,16 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Nav from './components/Nav';
 import About from './pages/About';
 import Poyzeet from './pages/Poyzeet';
 import Sparky from './pages/Sparky';
 import Explorations from './pages/Explorations';
 import Accueil from './pages/Accueil';
+import Nav from './layout/nav';
 
 export default function App() {
   return (
     <div className=" w-full h-screen">
-      <Nav /> 
+      <Nav />
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/about" element={<About />} />
