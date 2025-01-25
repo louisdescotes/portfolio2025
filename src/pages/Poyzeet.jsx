@@ -10,8 +10,8 @@ const Poyzeet = () => {
                 </article>
             </section>
             <section className="flex flex-col gap-16 pb-32">
-                <video controls muted autoPlay playsinline>
-                    <source src="/img/poyzeet/poyzeet.mp4" type="video/mp4"/>
+            <video playsinline autoplay muted controls>
+            <source src="/img/poyzeet/poyzeet.mp4" type="video/mp4"/>
                 </video>
                 <img className="w-full" src="/img/poyzeet/poyzeet1.jpg" alt="" />
                 <img className="w-full" src="/img/poyzeet/poyzeet2.jpg" alt="" />

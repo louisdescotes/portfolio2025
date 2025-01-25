@@ -135,6 +135,15 @@
       line-height: 1.4;
       font-weight: 500;
   }
+
+  video {
+    object-fit: cover; 
+    width: 100%;
+    height: auto;
+    -webkit-transform: translateZ(0); 
+    transform: translateZ(0); 
+  }
+  
   
   @media screen and (max-width: 767px) {
     .aboutTitle,
