@@ -1,9 +1,9 @@
 import Footer from "./footer"
 
-const Page = ({name, number, className, roles, client, annee, footer, children }) => {
+const Page = ({name, photo, photoName, number, className, roles, client, annee, footer, children }) => {
     return (
         <section id="top">
-            <section className="gridCol h-screen w-full bg-[url(/img/test.jpg)] bg-cover text-[#FAFAFA]">
+            <section className="gridCol h-screen w-full bg-cover text-[#FAFAFA]" style={{ backgroundImage: `url(/img/${photo}/${photoName}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="flex flex-col justify-center items-center col-start-3 col-end-5 row-start-2 row-end-5 ">
                     <p className="apocBase">{number}</p>
                     <p className="titleProjet">{name}</p>

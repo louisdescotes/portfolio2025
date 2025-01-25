@@ -2,7 +2,7 @@ import Page from "../layout/page"
 
 const Poyzeet = () => {
     return(
-        <Page name="Poyzeet" number="02" className="developpement - design - 3D" roles="Développeur & designer" client="Projet perso" annee="2024" footer="explorations">
+        <Page name="Poyzeet" photo="poyzeet" photoName="poyzeet1" number="03" className="developpement - design - 3D" roles="Développeur & designer" client="Projet perso" annee="2024" footer="explorations">
             <section className="w-full flex justify-center textDescriptionProjet py-32">
                 <article className="max-w-xl flex flex-col gap-6">
                     <p>Poyzeet vous propose des vinyles de bruits blancs, pour ceux qui cherchent à se reconnecter avec eux-mêmes. Les bruits blancs permettent à se concentrer, dormir plus facilement.</p>
@@ -10,10 +10,12 @@ const Poyzeet = () => {
                 </article>
             </section>
             <section className="flex flex-col gap-16 pb-32">
-                <img className="w-full" src="/img/test2.jpg" alt="" />
-                <img className="w-full" src="/img/test2.jpg" alt="" />
-                <img className="w-full" src="/img/test2.jpg" alt="" />
-                <img className="w-full" src="/img/test2.jpg" alt="" />
+                <video controls muted autoPlay>
+                    <source src="/img/poyzeet/poyzeet.mp4" type="video/mp4"/>
+                </video>
+                <img className="w-full" src="/img/poyzeet/poyzeet1.jpg" alt="" />
+                <img className="w-full" src="/img/poyzeet/poyzeet2.jpg" alt="" />
+                <img className="w-full" src="/img/poyzeet/poyzeet3.jpg" alt="" />
             </section>
         </Page>
     )

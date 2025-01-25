@@ -19,7 +19,7 @@ const Nav = () => {
                 </Link>
                 <Link
                     to="/about"
-                    className="roleName text-[#FAFAFA] mix-blend-difference bg-black"
+                    className="subtitleDescriptionProjet text-[#FAFAFA] mix-blend-difference bg-black"
                 >
                     About
                 </Link>

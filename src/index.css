@@ -79,6 +79,7 @@
     font-family: 'Satoshi-Medium', sans-serif;
     font-size: 8rem;
     font-display: swap;
+    font-variant-numeric: tabular-nums
   }
   .aboutTitle {
     font-family: 'ApocNormal-BoldItalic', sans-serif;

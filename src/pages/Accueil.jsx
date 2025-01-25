@@ -51,6 +51,47 @@ const Accueil = () => {
 
           <Link
             onMouseEnter={() => {
+              setHoveredLink("invisibles");
+            }}
+            onMouseLeave={() => {
+              setHoveredLink(null);
+            }}
+            to="/invisibles"
+            className="h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full"
+          >
+            <div className="flex items-center relative">
+              <p
+                className={` ${
+                  hoveredLink === "invisibles" || hoveredLink === null
+                    ? "text-[#151414]"
+                    : "text-[#CDCDCD]"
+                } projet lg:pl-4 pt-3`}
+              >
+                Invisibles
+              </p>
+              <span
+                className={` ${
+                  hoveredLink === "invisibles" || hoveredLink === null
+                    ? "text-[#151414]"
+                    : "text-[#CDCDCD]"
+                } apocBase absolute top-0`}
+              >
+                02
+              </span>
+            </div>
+            <p
+              className={` apocBase flex items-center ${
+                hoveredLink === "invisibles" || hoveredLink === null
+                  ? "text-[#151414]"
+                  : "text-[#CDCDCD]"
+              }`}
+            >
+              developpement - design - 3D
+            </p>
+          </Link>
+
+          <Link
+            onMouseEnter={() => {
               setHoveredLink("poyzeet");
             }}
             onMouseLeave={() => {
@@ -76,7 +117,7 @@ const Accueil = () => {
                     : "text-[#CDCDCD]"
                 } apocBase absolute top-0`}
               >
-                02
+                03
               </span>
             </div>
             <p
@@ -90,7 +131,7 @@ const Accueil = () => {
             </p>
           </Link>
 
-          <Link
+          {/* <Link
             onMouseEnter={() => {
               setHoveredLink("explorations");
             }}
@@ -117,7 +158,7 @@ const Accueil = () => {
                     : "text-[#CDCDCD]"
                 } apocBase absolute top-0`}
               >
-                03
+                04
               </span>
             </div>
             <p
@@ -129,25 +170,34 @@ const Accueil = () => {
             >
               developpement - 3D
             </p>
-          </Link>
+          </Link> */}
         </aside>
       </section>
       <section className="w-full lg:flex items-center pr-8 2xl:pr-0 hidden">
         {hoveredLink === "poyzeet" && (
-          <div className="grid grid-cols-[55%_45%] gap-8 px-16">
+          <div className="flex flex-col gap-4 px-16">
             <img
-              className=" h-full w-full object-cover "
-              src="/img/test.jpg"
+              className=" h-full max-h-[30rem] min-h-80 w-full object-cover row-span-2 pb-28 mt-16"
+              src="/img/poyzeet/poyzeetP1.jpg"
               alt=""
             />
             <img
-              className=" h-full w-full object-cover row-span-2 pb-28 mt-16"
-              src="/img/test.jpg"
+              className=" h-full max-h-96 min-h-80 w-full object-cover py-8 -my-8 "
+              src="/img/poyzeet/poyzeetP2.jpg"
+              alt=""
+            />
+          </div>
+        )}
+                {hoveredLink === "invisibles" && (
+          <div className="flex flex-col gap-4 px-16">
+            <img
+              className=" h-full w-full max-h-96 min-h-80 object-cover "
+              src="/img/invisibles/invisiblesbg.jpg"
               alt=""
             />
             <img
-              className=" h-full w-full object-cover py-8 -my-8 "
-              src="/img/test.jpg"
+              className=" h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8 "
+              src="/img/invisibles/invisibles3.jpg"
               alt=""
             />
           </div>
@@ -155,18 +205,18 @@ const Accueil = () => {
         {hoveredLink === "sparky" && (
           <div className="grid grid-cols-[55%_45%] gap-8 px-16">
             <img
-              className=" h-full w-full object-cover "
-              src="/img/test.jpg"
+              className=" h-full w-full max-h-96 min-h-80 object-cover "
+              src="/img/sparky/sparky1.jpg"
               alt=""
             />
             <img
-              className=" h-full w-full object-cover row-span-2 pb-28 mt-16"
-              src="/img/test.jpg"
+              className=" h-full w-full max-h-[30rem] min-h-80 object-cover row-span-2 pb-28 mt-16"
+              src="/img/sparky/sparky2.jpg"
               alt=""
             />
             <img
-              className=" h-full w-full object-cover py-8 -my-8 "
-              src="/img/test.jpg"
+              className=" h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8 "
+              src="/img/sparky/sparky3.jpg"
               alt=""
             />
           </div>
@@ -174,17 +224,17 @@ const Accueil = () => {
         {hoveredLink === "explorations" && (
           <div className="grid grid-cols-[55%_45%] gap-8 px-16">
             <img
-              className=" h-full w-full object-cover "
+              className=" h-full w-full max-h-96 min-h-80 object-cover "
               src="/img/test.jpg"
               alt=""
             />
             <img
-              className=" h-full w-full object-cover row-span-2 pb-28 mt-16"
+              className=" h-full w-full max-h-[30rem] min-h-80 object-cover row-span-2 pb-28 mt-16"
               src="/img/test.jpg"
               alt=""
             />
             <img
-              className=" h-full w-full object-cover py-8 -my-8 "
+              className=" h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8 "
               src="/img/test.jpg"
               alt=""
             />
