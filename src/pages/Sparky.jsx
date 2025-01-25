@@ -10,7 +10,7 @@ const Sparky = () => {
                 </article>
             </section>
             <section className="flex flex-col gap-16 pb-32">
-            <video playsinline autoplay muted controls>
+            <video playsinline autoPlay muted controls>
             <source src="/img/sparky/sparky.mp4" type="video/mp4"/>
                 </video>
                 <img className="w-full" src="/img/sparky/sparky1.jpg" alt="" />
