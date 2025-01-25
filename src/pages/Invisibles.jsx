@@ -10,14 +10,14 @@ const Invisibles = () => {
                 </article>
             </section>
             <section className="flex flex-col gap-16 pb-32">
-            <video controls muted autoPlay>
+            <video controls muted autoPlay playsinline>
                     <source src="/img/invisibles/invisibles0.mp4" type="video/mp4"/>
                 </video>
                 <img className="w-full" src="/img/invisibles/invisibles3.jpg" alt="" />
-                <video controls muted autoPlay>
+                <video controls muted autoPlay playsinline>
                     <source src="/img/invisibles/invisibles1.mp4" type="video/mp4"/>
                 </video>
-                <video controls muted autoPlay>
+                <video controls muted autoPlay playsinline>
                     <source src="/img/invisibles/invisibles2.mp4" type="video/mp4"/>
                 </video>
             </section>
