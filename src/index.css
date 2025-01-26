@@ -15,10 +15,6 @@
       box-sizing: border-box;
       scroll-behavior: auto;
   }
-
-  html, body {
-    overflow: hidden; /* Important pour Lenis */
-  }
   
   div.root {
     min-height: 100vh;
@@ -63,7 +59,6 @@
       line-height: 1;
       font-weight: 500;
       background-color: #ffffff; 
-      
   }
   
   .gridCol {

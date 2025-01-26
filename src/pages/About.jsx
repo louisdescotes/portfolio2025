@@ -18,7 +18,7 @@ const About = () => {
             Actuellement en alternance chez Beease Digital
           </SentenceAppear>
         </div>
-        <div className="flex items-center gap-14 overflow-hidden">
+        <div className="flex items-center gap-8 lg:gap-14 overflow-hidden">
           <motion.a
             initial={{ y: "80%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

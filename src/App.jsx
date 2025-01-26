@@ -8,8 +8,8 @@ import Explorations from "./pages/Explorations";
 import Accueil from "./pages/Accueil";
 import Invisibles from "./pages/Invisibles";
 import Nav from "./layout/nav";
-import Loading from './Loading';
-import { ReactLenis } from 'lenis/react'; 
+import Loading from "./Loading";
+import { ReactLenis } from "lenis/react";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -22,20 +22,25 @@ export default function App() {
     return <Loading />;
   }
 
-  const location = useLocation(); 
+  const location = useLocation();
   return (
-    <ReactLenis root>
-        <Nav />
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Accueil />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/poyzeet" element={<Poyzeet />} />
-            <Route path="/invisibles" element={<Invisibles />} />
-            <Route path="/sparky" element={<Sparky />} />
-            <Route path="/explorations" element={<Explorations />} />
-          </Routes>
-        </AnimatePresence>
+    <ReactLenis root
+      options={{
+        smooth: true,
+        smoothTouch: true,
+      }}
+    >
+      <Nav />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/poyzeet" element={<Poyzeet />} />
+          <Route path="/invisibles" element={<Invisibles />} />
+          <Route path="/sparky" element={<Sparky />} />
+          <Route path="/explorations" element={<Explorations />} />
+        </Routes>
+      </AnimatePresence>
     </ReactLenis>
   );
 }
