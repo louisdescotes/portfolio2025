@@ -1,20 +1,18 @@
 import { motion } from "framer-motion";
 import SentenceAppear from "../utils/sentenceAppear";
 import Footer from "./footer";
-import Nav from '../layout/nav';
-
 
 const Page = ({name, photo, photoName, number, className, roles, client, annee, footer, children }) => {
     return (
         <section id="top" className="overflow-hidden">
-            <Nav />
-            <motion.section
-                className="gridCol h-screen w-full bg-cover text-[#FAFAFA]"
-                style={{ backgroundImage: `url(/img/${photo}/${photoName}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                initial={{ scale: 1 }} 
-                animate={{ scale: 1.1 }} 
-                transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }} 
+            <section
+                className="relative gridCol h-screen w-full bg-cover text-[#FAFAFA] "
             >
+                <motion.img 
+                initial={{ transform: 'scale(1)' }}
+                animate={{ transform: 'scale(1.05)' }}
+                transition={{ duration: 1, ease: "easeOut" }} 
+                src={`/img/${photo}/${photoName}.jpg`} alt="" className="absolute h-screen w-full object-cover -z-50"/>
                 <div className="flex flex-col justify-center items-center col-start-3 col-end-5 row-start-2 row-end-5 ">
                     <SentenceAppear style="apocBase" delay={.5}>{number}</SentenceAppear>
                     <SentenceAppear style="titleProjet" delay={.3}>{name}</SentenceAppear>
@@ -34,7 +32,7 @@ const Page = ({name, photo, photoName, number, className, roles, client, annee, 
                         <SentenceAppear style="subtitleDescriptionProjet" delay={.5}>{annee}</SentenceAppear>
                     </div>
                 </div>
-            </motion.section>
+            </section>
 
             <section
                 className="lg:px-20 px-5 maxWidth"

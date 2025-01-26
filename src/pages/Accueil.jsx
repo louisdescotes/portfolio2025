@@ -4,11 +4,38 @@ import { motion } from "framer-motion";
 
 const Accueil = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
-
+  const containerVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 1,
+        ease: [0.215, 0.61, 0.355, 1],
+      },
+    },
+  };
+  const childVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: [0.215, 0.61, 0.355, 1],
+      },
+    },
+  };
   return (
     <section className="flex gap-24 w-full h-full maxWidth">
       <section className="gridCol lg:max-w-[50%] ">
-        <aside className="flex flex-col justify-center items-center row-start-2 row-end-5 col-start-1 col-end-7 lg:col-end-7 lg:pl-[100px] 2xl:px-0 lg:px-0 px-5">
+        <motion.aside
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="flex flex-col justify-center items-center row-start-2 row-end-5 col-start-1 col-end-7 lg:col-end-7 lg:pl-[100px] 2xl:px-0 lg:px-0 px-5"
+        >
           <Link
             onMouseEnter={() => {
               setHoveredLink("sparky");
@@ -19,35 +46,37 @@ const Accueil = () => {
             to="/sparky"
             className="h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full "
           >
-            <div className="flex items-center relative">
+            <motion.article variants={childVariants}>
+              <div className="flex items-center relative">
+                <p
+                  className={` ${
+                    hoveredLink === "sparky" || hoveredLink === null
+                      ? "text-[#151414]"
+                      : "text-[#CDCDCD]"
+                  } projet lg:pl-4 pt-3`}
+                >
+                  Sparky
+                </p>
+                <span
+                  className={` ${
+                    hoveredLink === "sparky" || hoveredLink === null
+                      ? "text-[#151414]"
+                      : "text-[#CDCDCD]"
+                  } apocBase absolute top-0`}
+                >
+                  01
+                </span>
+              </div>
               <p
-                className={` ${
+                className={` apocBase flex items-center ${
                   hoveredLink === "sparky" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
-                } projet lg:pl-4 pt-3`}
+                }`}
               >
-                Sparky
+                developpement - design - 3D
               </p>
-              <span
-                className={` ${
-                  hoveredLink === "sparky" || hoveredLink === null
-                    ? "text-[#151414]"
-                    : "text-[#CDCDCD]"
-                } apocBase absolute top-0`}
-              >
-                01
-              </span>
-            </div>
-            <p
-              className={` apocBase flex items-center ${
-                hoveredLink === "sparky" || hoveredLink === null
-                  ? "text-[#151414]"
-                  : "text-[#CDCDCD]"
-              }`}
-            >
-              developpement - design - 3D
-            </p>
+            </motion.article>
           </Link>
 
           <Link
@@ -60,35 +89,37 @@ const Accueil = () => {
             to="/invisibles"
             className="h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full"
           >
-            <div className="flex items-center relative">
+            <motion.article variants={childVariants}>
+              <div className="flex items-center relative">
+                <p
+                  className={` ${
+                    hoveredLink === "invisibles" || hoveredLink === null
+                      ? "text-[#151414]"
+                      : "text-[#CDCDCD]"
+                  } projet lg:pl-4 pt-3`}
+                >
+                  Invisibles
+                </p>
+                <span
+                  className={` ${
+                    hoveredLink === "invisibles" || hoveredLink === null
+                      ? "text-[#151414]"
+                      : "text-[#CDCDCD]"
+                  } apocBase absolute top-0`}
+                >
+                  02
+                </span>
+              </div>
               <p
-                className={` ${
+                className={` apocBase flex items-center ${
                   hoveredLink === "invisibles" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
-                } projet lg:pl-4 pt-3`}
+                }`}
               >
-                Invisibles
+                developpement - design - 3D
               </p>
-              <span
-                className={` ${
-                  hoveredLink === "invisibles" || hoveredLink === null
-                    ? "text-[#151414]"
-                    : "text-[#CDCDCD]"
-                } apocBase absolute top-0`}
-              >
-                02
-              </span>
-            </div>
-            <p
-              className={` apocBase flex items-center ${
-                hoveredLink === "invisibles" || hoveredLink === null
-                  ? "text-[#151414]"
-                  : "text-[#CDCDCD]"
-              }`}
-            >
-              developpement - design - 3D
-            </p>
+            </motion.article>
           </Link>
 
           <Link
@@ -101,80 +132,45 @@ const Accueil = () => {
             to="/poyzeet"
             className="h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full"
           >
-            <div className="flex items-center relative">
+            <motion.article variants={childVariants}>
+              <div className="flex items-center relative">
+                <p
+                  className={` ${
+                    hoveredLink === "poyzeet" || hoveredLink === null
+                      ? "text-[#151414]"
+                      : "text-[#CDCDCD]"
+                  } projet lg:pl-4 pt-3`}
+                >
+                  Poyzeet
+                </p>
+                <span
+                  className={` ${
+                    hoveredLink === "poyzeet" || hoveredLink === null
+                      ? "text-[#151414]"
+                      : "text-[#CDCDCD]"
+                  } apocBase absolute top-0`}
+                >
+                  03
+                </span>
+              </div>
               <p
-                className={` ${
+                className={` apocBase flex items-center ${
                   hoveredLink === "poyzeet" || hoveredLink === null
                     ? "text-[#151414]"
                     : "text-[#CDCDCD]"
-                } projet lg:pl-4 pt-3`}
+                }`}
               >
-                Poyzeet
+                developpement - design - 3D
               </p>
-              <span
-                className={` ${
-                  hoveredLink === "poyzeet" || hoveredLink === null
-                    ? "text-[#151414]"
-                    : "text-[#CDCDCD]"
-                } apocBase absolute top-0`}
-              >
-                03
-              </span>
-            </div>
-            <p
-              className={` apocBase flex items-center ${
-                hoveredLink === "poyzeet" || hoveredLink === null
-                  ? "text-[#151414]"
-                  : "text-[#CDCDCD]"
-              }`}
-            >
-              developpement - design - 3D
-            </p>
+            </motion.article>
           </Link>
-
-          {/* <Link
-            onMouseEnter={() => {
-              setHoveredLink("explorations");
-            }}
-            onMouseLeave={() => {
-              setHoveredLink(null);
-            }}
-            to="/explorations"
-            className=" h-full flex flex-col lg:flex-row justify-center lg:justify-between lg:items-center w-full "
-          >
-            <div className="flex items-center relative">
-              <p
-                className={` ${
-                  hoveredLink === "explorations" || hoveredLink === null
-                    ? "text-[#151414]"
-                    : "text-[#CDCDCD]"
-                } projet lg:pl-4 pt-3`}
-              >
-                Explorations
-              </p>
-              <span
-                className={` ${
-                  hoveredLink === "explorations" || hoveredLink === null
-                    ? "text-[#151414]"
-                    : "text-[#CDCDCD]"
-                } apocBase absolute top-0`}
-              >
-                04
-              </span>
-            </div>
-            <p
-              className={` apocBase flex items-center ${
-                hoveredLink === "realisations" || hoveredLink === null
-                  ? "text-[#151414]"
-                  : "text-[#CDCDCD]"
-              }`}
-            >
-              developpement - 3D
-            </p>
-          </Link> */}
-        </aside>
+        </motion.aside>
       </section>
-      <section className="w-full lg:flex items-center pr-8 2xl:pr-0 hidden">
+      <motion.section 
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{ delay: .4}}
+      className="w-full lg:flex items-center pr-8 2xl:pr-0 hidden">
         {hoveredLink === "poyzeet" && (
           <motion.div
             initial="hidden"
@@ -364,7 +360,7 @@ const Accueil = () => {
             />
           </motion.div>
         )} */}
-      </section>
+      </motion.section>
     </section>
   );
 };
