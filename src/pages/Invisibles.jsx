@@ -18,17 +18,20 @@ const Invisibles = () => {
       <section className="w-full flex justify-center textDescriptionProjet py-32">
         <article className="max-w-xl flex flex-col gap-6">
           <ViewApparitionSentence delay={0}>
-            Poyzeet vous propose des vinyles de bruits blancs, pour ceux qui
-            cherchent à se reconnecter avec eux-mêmes. Les bruits blancs
-            permettent à se concentrer, dormir plus facilement.
+            Avec l'accès précoce à Internet, les jeunes passent de plus en plus
+            de temps sur les réseaux sociaux. Malheureusement, derrière l'écran
+            et l'anonymat de certains comptes, le harcèlement en ligne devient
+            plus facile, et les chiffres sont en constante augmentation depuis
+            l'année dernière. Mon projet, Invisibles, est un site interactif
+            conçu pour sensibiliser les collégiens à cette problématique.
+            L'expérience plonge les visiteurs dans le quotidien d'une
+            collégienne victime de harcèlement.
           </ViewApparitionSentence>
           <ViewApparitionSentence delay={0.1}>
-            Ce projet à pour but de créer un site vitrine autour d’un produit
-            moderne et très niche. Pour cela, j’ai donc décidé de créer une
-            courte animation en 3D du produit. Il ne faut pas oublier qu’un
-            vinyle au delà de sa fonction première de produire de la musique et
-            aussi un objet esthétique. C’est pourquoi il est aussi important de
-            jouer sur cet aspect.
+            J'ai choisi d'exploiter largement la 3D pour capter l'attention de
+            ce jeune public. L'accent a été mis sur les visuels plutôt que sur
+            le texte, afin de créer un impact émotionnel puissant et de rendre
+            le message plus accessible et percutant.
           </ViewApparitionSentence>
         </article>
       </section>

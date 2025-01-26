@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Nav = () => {
   return (
     <header className="absolute top-0 w-full h-24 isolation-auto">
-      <nav className="maxWidth w-full h-full flex items-center justify-between lg:px-20 2xl:px-0 px-5">
+      <nav className="maxWidth w-full h-full flex items-center justify-between lg:px-20 2xl:px-20 px-5">
         <Link
           to="/"
           className="flex items-center gap-4 mix-blend-difference z-50"

@@ -28,13 +28,13 @@ const Accueil = () => {
     },
   };
   return (
-    <section className="flex gap-24 w-full h-full maxWidth">
+    <section className="flex gap-24 w-full h-dvh maxWidth">
       <section className="gridCol lg:max-w-[50%] ">
         <motion.aside
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="flex flex-col justify-center items-center row-start-2 row-end-5 col-start-1 col-end-7 lg:col-end-7 lg:pl-[100px] 2xl:px-0 lg:px-0 px-5"
+          className="flex flex-col justify-center items-center row-start-2 row-end-5 col-start-1 col-end-7 lg:col-end-7 lg:pl-[100px] 2xl:px-20 lg:px-0 px-5"
         >
           <Link
             onMouseEnter={() => {

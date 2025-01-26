@@ -15,7 +15,14 @@
       box-sizing: border-box;
       scroll-behavior: auto;
   }
+
+  html, body {
+    overflow: hidden; /* Important pour Lenis */
+  }
   
+  div.root {
+    min-height: 100vh;
+  }
   /* ------------------------- Scaling System by Osmo [https://osmo.supply/] -------------------------  */
   /* Desktop */
   :root {
