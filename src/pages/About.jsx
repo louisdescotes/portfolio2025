@@ -52,6 +52,17 @@ const About = () => {
           >
             <TextAppear>Git</TextAppear>
           </motion.a>
+          <motion.a
+            initial={{ y: "80%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: [0.76, 0, 0.24, 1], delay: 0.6, duration: 1 }}
+            className="titleDescriptionProjet"
+            href="mailto:ldescotes1@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TextAppear>Email</TextAppear>
+          </motion.a>
         </div>
       </aside>
     </section>
