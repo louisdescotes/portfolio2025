@@ -10,13 +10,13 @@ import Loading from './Loading';
 import Invisibles from './pages/Invisibles';
 
 export default function App() {
-  const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        setTimeout(() => setLoading(false), 3300)
-    }, [])
-    if (loading) {
-        return <Loading/>
-    }
+  // const [loading, setLoading] = useState(true)
+  //   useEffect(() => {
+  //       setTimeout(() => setLoading(false), 3300)
+  //   }, [])
+  //   if (loading) {
+  //       return <Loading/>
+  //   }
   return (
     <div className=" w-full h-dvh">
       <Nav />

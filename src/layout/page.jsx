@@ -1,34 +1,50 @@
-import Footer from "./footer"
+import { motion } from "framer-motion";
+import SentenceAppear from "../utils/sentenceAppear";
+import Footer from "./footer";
+import Nav from '../layout/nav';
+
 
 const Page = ({name, photo, photoName, number, className, roles, client, annee, footer, children }) => {
     return (
-        <section id="top">
-            <section className="gridCol h-screen w-full bg-cover text-[#FAFAFA]" style={{ backgroundImage: `url(/img/${photo}/${photoName}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section id="top" className="overflow-hidden">
+            <Nav />
+            <motion.section
+                className="gridCol h-screen w-full bg-cover text-[#FAFAFA]"
+                style={{ backgroundImage: `url(/img/${photo}/${photoName}.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                initial={{ scale: 1 }} 
+                animate={{ scale: 1.1 }} 
+                transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }} 
+            >
                 <div className="flex flex-col justify-center items-center col-start-3 col-end-5 row-start-2 row-end-5 ">
-                    <p className="apocBase">{number}</p>
-                    <p className="titleProjet">{name}</p>
-                    <p className="apocBase text-center lg:text-justify">{className}</p>
+                    <SentenceAppear style="apocBase" delay={.5}>{number}</SentenceAppear>
+                    <SentenceAppear style="titleProjet" delay={.3}>{name}</SentenceAppear>
+                    <SentenceAppear style="apocBase text-center lg:text-justify" delay={.4} >{className}</SentenceAppear>
                 </div>
                 <div className="hidden md:flex justify-between col-start-2 col-end-6 row-start-5 row-end-6">
                     <div className="flex-1 flex flex-col items-center gap-2">
-                        <p className="titleDescriptionProjet text-[#CDCDCD]">Role</p>
-                        <p className="subtitleDescriptionProjet">{roles}</p>
+                        <SentenceAppear style="titleDescriptionProjet text-[#CDCDCD]" delay={.45}>Role</SentenceAppear>
+                        <SentenceAppear style="subtitleDescriptionProjet" delay={.5}>{roles}</SentenceAppear>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
-                        <p className="titleDescriptionProjet text-[#CDCDCD]">Client</p>
-                        <p className="subtitleDescriptionProjet">{client}</p>
+                        <SentenceAppear style="titleDescriptionProjet text-[#CDCDCD]" delay={.45}>Client</SentenceAppear>
+                        <SentenceAppear style="subtitleDescriptionProjet" delay={.5}>{client}</SentenceAppear>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
-                        <p className="titleDescriptionProjet text-[#CDCDCD]">Annee</p>
-                        <p className="subtitleDescriptionProjet">{annee}</p>
+                        <SentenceAppear style="titleDescriptionProjet text-[#CDCDCD]" delay={.45}>Annee</SentenceAppear>
+                        <SentenceAppear style="subtitleDescriptionProjet" delay={.5}>{annee}</SentenceAppear>
                     </div>
                 </div>
-            </section>
-            <section className="lg:px-20 px-5 maxWidth">
+            </motion.section>
+
+            <section
+                className="lg:px-20 px-5 maxWidth"
+            >
                 {children}
             </section>
+
             <Footer nextName={footer} />
         </section>
-    )
-}
-export default Page
+    );
+};
+
+export default Page;

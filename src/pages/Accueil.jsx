@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Accueil = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
@@ -175,71 +176,194 @@ const Accueil = () => {
       </section>
       <section className="w-full lg:flex items-center pr-8 2xl:pr-0 hidden">
         {hoveredLink === "poyzeet" && (
-          <div className="flex flex-col gap-4 px-16">
-            <img
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.15 }}
+            className="flex flex-col gap-4 px-16"
+          >
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
               className=" h-full max-h-[30rem] min-h-80 w-full object-cover row-span-2 pb-28 mt-16"
               src="/img/poyzeet/poyzeetP1.jpg"
               alt=""
             />
-            <img
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
               className=" h-full max-h-96 min-h-80 w-full object-cover py-8 -my-8 "
               src="/img/poyzeet/poyzeetP2.jpg"
               alt=""
             />
-          </div>
+          </motion.div>
         )}
-                {hoveredLink === "invisibles" && (
-          <div className="flex flex-col gap-4 px-16">
-            <img
+        {hoveredLink === "invisibles" && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.15 }}
+            className="flex flex-col gap-4 px-16"
+          >
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
               className=" h-full w-full max-h-96 min-h-80 object-cover "
               src="/img/invisibles/invisiblesbg.jpg"
               alt=""
             />
-            <img
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
               className=" h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8 "
               src="/img/invisibles/invisibles3.jpg"
               alt=""
             />
-          </div>
+          </motion.div>
         )}
         {hoveredLink === "sparky" && (
-          <div className="grid grid-cols-[55%_45%] gap-8 px-16">
-            <img
-              className=" h-full w-full max-h-96 min-h-80 object-cover "
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.15 }}
+            className="grid grid-cols-[55%_45%] gap-8 px-16"
+          >
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
+              className="h-full w-full max-h-96 min-h-80 object-cover"
               src="/img/sparky/sparky1.jpg"
-              alt=""
+              alt="Sparky 1"
             />
-            <img
-              className=" h-full w-full max-h-[30rem] min-h-80 object-cover row-span-2 pb-28 mt-16"
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
+              className="h-full w-full max-h-[30rem] min-h-80 object-cover row-span-2 pb-28 mt-16"
               src="/img/sparky/sparky2.jpg"
-              alt=""
+              alt="Sparky 2"
             />
-            <img
-              className=" h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8 "
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: {
+                  opacity: 1,
+                  translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.215, 0.61, 0.355, 1],
+                  },
+                },
+              }}
+              className="h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8"
               src="/img/sparky/sparky3.jpg"
-              alt=""
+              alt="Sparky 3"
             />
-          </div>
+          </motion.div>
         )}
-        {hoveredLink === "explorations" && (
-          <div className="grid grid-cols-[55%_45%] gap-8 px-16">
-            <img
+        {/* {hoveredLink === "explorations" && (
+          <motion.div
+          initial={hidden}
+          animate={visible}
+          transition={{ staggerChildren: 0.15,}}
+          className="grid grid-cols-[55%_45%] gap-8 px-16">
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: { opacity: 1, translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [.215,.61,.355,1],
+                  },
+                 },
+              }}
               className=" h-full w-full max-h-96 min-h-80 object-cover "
               src="/img/test.jpg"
               alt=""
             />
-            <img
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: { opacity: 1, translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [.215,.61,.355,1],
+                  },
+                 },
+              }}
               className=" h-full w-full max-h-[30rem] min-h-80 object-cover row-span-2 pb-28 mt-16"
               src="/img/test.jpg"
               alt=""
             />
-            <img
+            <motion.img
+              variants={{
+                hidden: { opacity: 0, translateY: -10 },
+                visible: { opacity: 1, translateY: 0,
+                  transition: {
+                    duration: 0.5,
+                    ease: [.215,.61,.355,1],
+                  },
+                 },
+              }}
               className=" h-full w-full max-h-96 min-h-80 object-cover py-8 -my-8 "
               src="/img/test.jpg"
               alt=""
             />
-          </div>
-        )}
+          </motion.div>
+        )} */}
       </section>
     </section>
   );
