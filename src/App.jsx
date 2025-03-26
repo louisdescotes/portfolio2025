@@ -13,35 +13,33 @@ import { ReactLenis } from "lenis/react";
 import TagManager from "react-gtm-module";
 import ReactGA from "react-ga4";
 
-const GTM_ID = "GTM-57KD54V4"; 
-const GA_ID = "G-57KD54V4"; 
+const GTM_ID = "GTM-57KD54V4";
+const GA_ID = "G-57KD54V4";
 
 export default function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3300);
+    const timer = setTimeout(() => setLoading(false), 3300);
+    return () => clearTimeout(timer);
+  }, []);
 
+  useEffect(() => {
     TagManager.initialize({ gtmId: GTM_ID });
     ReactGA.initialize(GA_ID);
   }, []);
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
-  }, [location]);
+    if (!loading) {
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+    }
+  }, [location, loading]);
 
-  if (loading) {
-    return <Loading />;
-  }
+  if (loading) return <Loading />;
 
   return (
-    <ReactLenis root
-      options={{
-        smooth: true,
-        smoothTouch: true,
-      }}
-    >
+    <ReactLenis root options={{ smooth: true, smoothTouch: true }}>
       <Nav />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
